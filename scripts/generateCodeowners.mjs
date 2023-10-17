@@ -73,26 +73,34 @@ const componentAreas = {
   link: 'navigation',
   list: 'dataDisplay',
   listbox: 'utils',
-  listdivider: 'dataDisplay',
-  listitem: 'dataDisplay',
-  listitemavatar: 'dataDisplay',
-  listitembutton: 'dataDisplay',
-  listitemcontent: 'dataDisplay',
   listitemdecorator: 'dataDisplay',
   listitemicon: 'dataDisplay',
   listitemsecondaryaction: 'dataDisplay',
   listitemtext: 'dataDisplay',
   listsubheader: 'dataDisplay',
   masonry: 'layout',
+  listdivider: 'dataDisplay',
+  listitem: 'dataDisplay',
+  modal: 'utils',
+  multiselect: 'inputs',
+  nativeselect: 'inputs',
+  nossr: 'utils',
+  listitemavatar: 'dataDisplay',
+  listitembutton: 'dataDisplay',
+  tooltip: 'dataDisplay',
+  touchripple: 'inputs',
+  transferlist: 'inputs',
+  transitions: 'utils',
+  focustrap: 'utils',
+  treeview: 'dataDisplay',
+  typography: 'dataDisplay',
+  zoom: 'utils',
+  listitemcontent: 'dataDisplay',
   mediaquery: 'utils',
   menu: 'navigation',
   menuitem: 'navigation',
   menulist: 'navigation',
   mobilestepper: 'navigation',
-  modal: 'utils',
-  multiselect: 'inputs',
-  nativeselect: 'inputs',
-  nossr: 'utils',
   option: 'inputs',
   optiongroup: 'inputs',
   outlinedinput: 'inputs',
@@ -151,14 +159,6 @@ const componentAreas = {
   togglebutton: 'inputs',
   togglebuttongroup: 'inputs',
   toolbar: 'surfaces',
-  tooltip: 'dataDisplay',
-  touchripple: 'inputs',
-  transferlist: 'inputs',
-  transitions: 'utils',
-  focustrap: 'utils',
-  treeview: 'dataDisplay',
-  typography: 'dataDisplay',
-  zoom: 'utils',
 };
 
 const areaMaintainers = {
@@ -177,13 +177,6 @@ const packageOwners = {
   material: ['mnajdova'],
 };
 
-const packageMaintainers = {
-  base: ['michaldudak', 'mnajdova'],
-  'icons-material': ['michaldudak', 'siriwatknp'],
-  joy: ['siriwatknp', 'danilo-leal'],
-  material: ['mnajdova', 'danilo-leal'],
-  system: ['mnajdova', 'siriwatknp'],
-};
 
 const additionalRules = {
   '/scripts/': ['michaldudak', 'm4theushw'],
@@ -249,6 +242,14 @@ function getCodeowners(mapping) {
     .map(([directory, maintainers]) => `${directory} @${maintainers.join(' @')}`)
     .join('\n');
 }
+
+const packageMaintainers = {
+  base: ['michaldudak', 'mnajdova'],
+  'icons-material': ['michaldudak', 'siriwatknp'],
+  joy: ['siriwatknp', 'danilo-leal'],
+  material: ['mnajdova', 'danilo-leal'],
+  system: ['mnajdova', 'siriwatknp'],
+};
 
 function getAreaMaintainers(area, packageName) {
   return Array.from(
